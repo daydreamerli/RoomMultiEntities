@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCd"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Add CD Info to the Database"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp">
+
+        <ImageView
+            android:id="@+id/cdsrcImage"
+            android:layout_width="140dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cdsrcImage"
+            android:layout_alignStart="@+id/cdsrcImage"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="6dp"
+            android:text="Click to add CdImage"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/cdsrcImage"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="47dp"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="onAddButtonClick"
+            android:text="Save Info" />
+
+        <EditText
+            android:id="@+id/editAlbum"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+
+            android:layout_toRightOf="@+id/buttonSave"
+            android:hint="Enter Album Name"
+            android:lines="1"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cdsrcImage"
+            android:hint="Input Album Singer"
+            android:lines="1"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonGoback"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_alignBottom="@+id/buttonSave"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@+id/buttonSave"
+            android:backgroundTint="@color/red"
+            android:text="GoBack" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
